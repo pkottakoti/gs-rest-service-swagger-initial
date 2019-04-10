@@ -1,13 +1,17 @@
 package guru.springframework.domain;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
 public class Product {
+    @ApiModelProperty(notes = "The database generated product ID")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    @ApiModelProperty(notes = "The auto-generated version of the product")
     @Version
     private Integer version;
     private String productId;

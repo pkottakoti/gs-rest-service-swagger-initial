@@ -20,7 +20,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Iterable<Product> listAllProducts() {
         logger.debug("listAllProducts called");
-        return productRepository.findAll();
+        int i = 5 / 0;
+      return productRepository.findAll();
+
     }
 
     @Override
